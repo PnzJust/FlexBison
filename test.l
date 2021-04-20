@@ -14,6 +14,7 @@ ID               {letter}+
 KEY_WORD             else|if|int|return|void|while
 PLUS_OPERATOR            "+"
 MINUS_OPERATOR               "-"
+XOR_OPERATOR               "^"
 MUL_OPERATOR                 "*"
 DIV_OPERATOR                 "/"
 LESS_THAN_OPERATOR           "<"
@@ -39,6 +40,7 @@ INT             "int"
 RETURN              "return"
 VOID                "void"
 WHILE               "while"
+BOOL                "bool"
 
 SYMBOL               "+"|"-"|"*"|"/"|"<"|"<="|">"|">="|"=="|"!="|"="|";"|","|"("|")"|"{"|"}"|"["|"]"|"/*"|"*/"      
 
@@ -71,6 +73,10 @@ ERROR                 ERROR1|ERROR2|ERROR3
                 return INT;
                         }
 
+{BOOL}            {
+                return BOOL;
+                        }
+
 {RETURN}             {
                 return RETURN;
                         }
@@ -94,6 +100,10 @@ ERROR                 ERROR1|ERROR2|ERROR3
 
 {MINUS_OPERATOR}    {
                 return MINUS_OPERATOR;
+                     }
+
+{XOR_OPERATOR}    {
+                return XOR_OPERATOR;
                      }
 
 {MUL_OPERATOR}          {
