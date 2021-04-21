@@ -64,6 +64,7 @@ statement : expression_stmt /* Mai trebuie adaugate cazuri*/
     | selection_stmt  { printf("If statement.\n"); }
     | iteration_stmt  {printf("While statement.\n"); }
     | return_stmt
+    | var_declaration
 ;
 
 expression_stmt : expression SEMI_COLON_SYMBOL
