@@ -28,4 +28,7 @@ int main(){
 
 
     while (x != false) { break;}
+
+    if (true)
+        int z;
 }
